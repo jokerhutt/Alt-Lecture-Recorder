@@ -12,6 +12,7 @@ export function PageTemplate() {
   return (
     <div className="flex h-full flex-col px-6">
       <PageHeader title="Your Presentations" />
+      <hr className="w-full text-black my-4" />
       <RecordingSelection />
       <hr className="w-full text-black my-8" />
       <RecordingsGrid recordings={recordings} />

@@ -7,7 +7,7 @@ type RecordingsGridProps = {
 
 export function RecordingsGrid({ recordings }: RecordingsGridProps) {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid lg:grid-cols-2 gap-4">
       {recordings.map((recording) => (
         <RecordingCard
           title={recording.title}

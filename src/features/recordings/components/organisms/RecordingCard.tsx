@@ -18,7 +18,7 @@ export function RecordingCard({
 }: RecordingOrganismProps) {
   return (
     <div className="w-full h-full">
-      <div className="w-full flex gap-4 h-full">
+      <div className="w-full flex flex-col lg:flex-col gap-4 h-full">
         <RecordingImageContainer image={image} />
         <RecordingTextContainer
           title={title}

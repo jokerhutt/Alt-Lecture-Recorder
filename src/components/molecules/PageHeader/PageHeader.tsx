@@ -4,7 +4,7 @@ type PageHeaderProps = {
 
 export function PageHeader({ title }: PageHeaderProps) {
   return (
-    <div className="h-20 flex justify-center items-center flex-col font-bold">
+    <div className="h-20 flex mt-4 lg:mt-0 justify-center items-center flex-col font-bold">
       <h1 className="text-4xl">{title}</h1>
     </div>
   );

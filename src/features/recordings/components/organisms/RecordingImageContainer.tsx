@@ -11,7 +11,7 @@ export function RecordingImageContainer({
   image,
 }: RecordingImageContainerProps) {
   return (
-    <div className="p-2 border w-80 min-w-80 max-w-80 flex flex-col justify-between">
+    <div className="p-2 border lg:w-80 min-w-80 lg:max-w-80 flex flex-col justify-between">
       <RecordingImage image={image}/>
       <div className="w-full flex justify-between items-center">
         <RecordingViews />
