@@ -7,7 +7,7 @@ type HomeCardProps = {
 export function HomeCard ({name, icon}: HomeCardProps) {
 
     return (
-        <div className="w-full text-white gap-2 h-36 flex justify-between p-8 items-center bg-leidenBlue">
+        <div className="w-full text-white gap-2 h-36 flex justify-between p-8 rounded-xl items-center bg-leidenBlue">
             <div className="w-full h-full flex items-center">
                 <p className="font-bold text-3xl">{name}</p> 
             </div>
