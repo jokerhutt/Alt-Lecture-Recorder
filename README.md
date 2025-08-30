@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# Alternative Lecture Recorder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project aims to provide an alternative to lecture recording sites like MediaSite by offering lectures the ability to pause and edit their recordings.
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+When a recording of a lecture is uploaded to a site, the recordings will automatically be published to the respective course within 48 hours UNLESS a lecturer pauses the automatic publishing for that lecture. While paused, the lecturer is able to edit the recording using an embedded video editor.
 
-## Expanding the ESLint configuration
+# TODOs
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Video & Playback
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Add auto-generated subtitles
+- Add timeout for lecture recordings
+- Add time display for videos
+- Add embedded video player
+- Add embedded video editor
+- Add view counter
+- Add remove recording
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Courses & Presentations
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Add course browsing
+- Add presentation browsing
+- Add course creation
+- Add ability to add students to course
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Authentication & Security
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Add SurfConext authentication
+- Add antivirus scanning
