@@ -2,6 +2,10 @@
 
 This project aims to provide an alternative to lecture recording sites like MediaSite by offering lectures the ability to pause and edit their recordings.
 
+## Preview
+![Image](https://github.com/user-attachments/assets/729f199a-a9b3-4e98-ba5b-e74fbc399934)
+
+
 ## Project Description
 
 When a recording of a lecture is uploaded to a site, the recordings will automatically be published to the respective course within 48 hours UNLESS a lecturer pauses the automatic publishing for that lecture. While paused, the lecturer is able to edit the recording using an embedded video editor.
