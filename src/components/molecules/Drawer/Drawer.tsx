@@ -1,4 +1,4 @@
-import { ModalBase } from "./ModalBase";
+import { ModalBase } from "../Modal/ModalBase";
 
 export function Drawer({
   open,

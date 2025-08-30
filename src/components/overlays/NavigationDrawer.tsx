@@ -1,7 +1,7 @@
 import NiceModal, { useModal } from "@ebay/nice-modal-react";
-import { Drawer } from "../Modal/Drawer";
-import { MainNavigation } from "../Nav/MainNavigation";
-import { HeroIcon } from "../commons/HeroIcon";
+import { Drawer } from "../molecules/Drawer/Drawer";
+import { MainNavigation } from "../organisms/Navigation/MainNavigation";
+import { HeroIcon } from "../atoms/HeroIcon";
 
 export default NiceModal.create(() => {
   const modal = useModal();

@@ -1,4 +1,4 @@
-import { HeroIcon } from "../commons/HeroIcon";
+import { HeroIcon } from "../../../../components/atoms/HeroIcon";
 
 type RecordingOrganismProps = {
   title: string;

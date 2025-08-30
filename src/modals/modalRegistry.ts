@@ -1,6 +1,5 @@
-// src/modals/index.ts
 import NiceModal from "@ebay/nice-modal-react";
-import EditDrawer from "./EditDrawer";
+import EditDrawer from "../components/overlays/NavigationDrawer";
 
 export function openEditDrawer(title: string) {
   void NiceModal.show("edit-drawer", { title });
