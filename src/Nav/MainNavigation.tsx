@@ -5,19 +5,27 @@ export function MainNavigation() {
   const tabNames = [
     "My Presentations",
     "Browse Courses",
-    "Browse Shared Folders",
+    "Shared Folders",
   ];
 
       const icons : IconName[] = ["FilmIcon", "AcademicCapIcon", "FolderIcon"]
 
 
   return (
-    <div className="h-full w-full px-4 border-r flex flex-col border-r-black">
-      <div className="h-40 w-full flex items-center">
+    <div className="h-full w-full lg:p-4 lg:border-r flex flex-col border-r-black">
+
+
+
+      <div className="w-full flex gap-3 items-center">
         <UserProfileIcon
-          size="h-32 w-32 max-h-32 max-w-32 text-2xl"
+          size="h-20 w-20 text-2xl"
           userName="DG"
         />
+        <div>
+            <p className="font-bold text-lg">David Glogowski</p>
+            <p>Lecturer</p>
+            <p>Leiden University</p>
+        </div>
       </div>
 
       <div className="w-full flex flex-col">
@@ -29,7 +37,7 @@ export function MainNavigation() {
                 <HeroIcon className="h-10 w-10" iconName={icons[index]}/>
               <p>{tab}</p>
             </div>
-            <div>
+            <div className="flex items-center">
                 <HeroIcon  iconName="ChevronRightIcon"/>
             </div>
             </div>
