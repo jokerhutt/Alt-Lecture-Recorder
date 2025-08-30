@@ -7,7 +7,7 @@ export function Header () {
             <div className="w-full">
 
             </div>
-            <div className="w-full flex gap-2 items-center justify-between h-full">
+            <div className="w-full flex gap-4 items-center justify-end h-full">
                 <UserProfileIcon userName="DG"/>
                 <Searchbar/>
             </div>
