@@ -25,6 +25,7 @@ function App() {
             <Routes>
               <Route path="/" element={<PageTemplate />} />
               <Route path="/recordings" element={<PageTemplate />} />
+
             </Routes>
           </div>
         </div>

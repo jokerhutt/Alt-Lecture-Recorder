@@ -1,10 +1,15 @@
 import { HeroIcon, type IconName } from "../../atoms/HeroIcon";
 import { Avatar } from "../../atoms/Avatar";
+import { useNavigate } from "react-router-dom";
 
 export function MainNavigation() {
+
+  const navigate = useNavigate()
+
   const tabNames = ["My Presentations", "Browse Courses", "Shared Folders"];
 
   const icons: IconName[] = ["FilmIcon", "AcademicCapIcon", "FolderIcon"];
+  const navPaths = ["/recordings", "/courses", "/shared"]
 
   return (
     <div className="h-full w-full lg:p-4 lg:border-r flex flex-col border-r-black">
@@ -21,7 +26,7 @@ export function MainNavigation() {
         <hr className="my-4" />
         <div className="flex w-full h-full gap-6 flex-col">
           {tabNames.map((tab, index) => (
-            <div className="flex justify-between">
+            <div className="flex justify-between hover:cursor-pointer" onClick={() => navigate(navPaths[index])}>
               <div className="flex w-full text-3xl items-center gap-4">
                 <HeroIcon className="h-10 w-10" iconName={icons[index]} />
                 <p>{tab}</p>
