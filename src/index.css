@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --color-leidenBlue: #081c74;
+}
