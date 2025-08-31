@@ -14,7 +14,7 @@ function App() {
   const recordings = mockPresentations;
   return (
     <Router>
-      <div className="h-dvh w-dvw flex flex-col">
+      <div className="h-full w-full flex flex-col">
         <header className="w-full">
           <Header />
         </header>
