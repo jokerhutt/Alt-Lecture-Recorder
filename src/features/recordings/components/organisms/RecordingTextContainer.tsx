@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { HeroIcon } from "../../../../components/atoms/HeroIcon";
 
 type RecordingTextContainerProps = {
@@ -12,8 +13,9 @@ export function RecordingTextContainer({
   course,
   description,
 }: RecordingTextContainerProps) {
+  const navigate = useNavigate()
   return (
-        <div className="flex flex-col gap-2">
+        <div onClick={() => navigate("/recordings/1")} className="flex flex-col gap-2">
           <h2 className="text-3xl font-bold text-leidenBlue">{title}</h2>
           <p>Owner: {owner}</p>
           <div className="flex gap-2 text-leidenBlue font-bold">

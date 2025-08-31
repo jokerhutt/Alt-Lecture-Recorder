@@ -8,6 +8,7 @@ import { RecordingsGrid } from "./features/recordings/components/organisms/Recor
 import { mockPresentations } from "./features/recordings/types/recording";
 import { CoursesGrid } from "./features/courses/components/organisms/CoursesGrid";
 import { CoursePage } from "./features/courses/components/pages/CoursePage";
+import { RecordingPage } from "./features/recordings/pages/RecordingPage";
 
 function App() {
   registerModals();
@@ -41,6 +42,12 @@ function App() {
                   <PageTemplate header="Your Presentations">
                     <RecordingsGrid recordings={recordings} />
                   </PageTemplate>
+                }
+              />
+              <Route
+                path="/recordings/:recordingId"
+                element={
+                  <RecordingPage/>
                 }
               />
               <Route
