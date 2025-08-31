@@ -5,13 +5,15 @@ import { RecordingViews } from "../molecules/RecordingViews";
 
 type RecordingImageContainerProps = {
   image: string;
+  width?: string;
 };
 
 export function RecordingImageContainer({
   image,
+  width = "w-1/2 max-w-1/2 min-w-1/2"
 }: RecordingImageContainerProps) {
   return (
-    <div className="p-2 border lg:w-80 min-w-80 lg:max-w-80 flex flex-col justify-between">
+    <div className={`${width} p-2 border flex flex-col justify-between`}>
       <RecordingImage image={image}/>
       <div className="w-full flex justify-between items-center">
       <div className="flex gap-2 items-center">

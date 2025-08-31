@@ -7,6 +7,7 @@ type RecordingOrganismProps = {
   course: string;
   description: string;
   image: string;
+  imageWidth?: string;
 };
 
 export function RecordingCard({
@@ -15,11 +16,12 @@ export function RecordingCard({
   course,
   description,
   image,
+  imageWidth
 }: RecordingOrganismProps) {
   return (
     <div className="w-full h-full">
       <div className="w-full flex flex-col lg:flex-row gap-4 h-full">
-        <RecordingImageContainer image={image} />
+        <RecordingImageContainer image={image} width={imageWidth}/>
         <RecordingTextContainer
           title={title}
           owner={owner}

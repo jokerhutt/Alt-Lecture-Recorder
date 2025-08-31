@@ -1,8 +1,11 @@
 import { HeroIcon } from "../../../../components/atoms/HeroIcon";
 import { Selection } from "../../../../components/atoms/Selection";
 import { RecordingSelection } from "../../../recordings/components/molecules/RecordingsSelection";
+import { RecordingCard } from "../../../recordings/components/organisms/RecordingCard";
+import { mockPresentations } from "../../../recordings/types/recording";
 
 export function CoursePage() {
+  const recordings = mockPresentations;
   return (
     <div>
       <div className="border-b p-8 flex flex-col">
@@ -15,36 +18,57 @@ export function CoursePage() {
             <h2 className="text-4xl font-bold">Politics</h2>
             <p className="text-xl">Owner: David Glogowski</p>
             <div className="flex gap-4 justify-between lg:justify-start">
-                <div className="border text-lg py-1 px-4">
-                    <p>View</p>
-                </div>
-                <div className="border text-lg py-1 px-4">
-                    <p>Edit</p>
-                </div>
-                <div className="border text-lg py-1 px-4">
-                    <p>Security</p>
-                </div>
-                <div className="border text-lg py-1 px-4">
-                    <p>Info</p>
-                </div>
+              <div className="border text-lg py-1 px-4">
+                <p>View</p>
+              </div>
+              <div className="border text-lg py-1 px-4">
+                <p>Edit</p>
+              </div>
+              <div className="border text-lg py-1 px-4">
+                <p>Security</p>
+              </div>
+              <div className="border text-lg py-1 px-4">
+                <p>Info</p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-full mt-2 flex flex-col lg:flex-row items-end justify-between">
-            <div className="w-full lg:block hidden">
-                <div className="flex items-center gap-2 ">
-                    <div className="">
-                        <HeroIcon iconName="ChevronLeftIcon"/>
-                    </div>
-                    <Selection options={["Page 1"]}/>
-                    <div className="">
-                        <HeroIcon iconName="ChevronRightIcon"/>
-                    </div>
+        <div className="w-full mt-2 flex flex-col lg:flex-row items-center justify-between">
+          <div className="w-full lg:block hidden">
+            <div className="flex items-center gap-2 ">
+              <div className="">
+                <HeroIcon iconName="ChevronLeftIcon" />
+              </div>
+              <Selection options={["Page 1"]} />
+              <div className="">
+                <HeroIcon iconName="ChevronRightIcon" />
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex items-center">
+            <RecordingSelection />
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col gap-4 mt-4">
+          {recordings.map((recording) => (
+            <div className="flex">
+              <RecordingCard
+                imageWidth="w-1/3 max-w-1/3 min-w-1/3"
+                title={recording.title}
+                owner={recording.owner}
+                course={recording.course}
+                description={recording.description}
+                image={recording.image}
+              />
+              <div className="flex flex-col items-end gap-2">
+                <input className="w-6 h-6 border" type="checkbox"/>
+                <div className="bg-green-600 rounded-2xl py-1 px-4">
+                    <p className="text-white font-bold">Published</p>
                 </div>
+              </div>  
             </div>
-            <div className="w-full flex items-center">
-                <RecordingSelection/>
-            </div>
+          ))}
         </div>
       </div>
       <div></div>
