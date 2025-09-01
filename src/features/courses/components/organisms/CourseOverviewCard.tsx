@@ -2,7 +2,7 @@ export function CourseOverviewCard() {
   return (
     <div className="flex gap-3 flex-col lg:flex-row">
       <img
-        className="object-cover h-44 lg:h-72"
+        className="object-cover h-44 "
         src="https://www.edx.org/_next/image?url=https%3A%2F%2Fprod-discovery.edx-cdn.org%2Fcdn-cgi%2Fimage%2Fwidth%3Dauto%2Cheight%3Dauto%2Cquality%3D75%2Cformat%3Dwebp%2Fmedia%2Fprograms%2Fcard_images%2Faaa20519-a8b3-426a-9aa1-d0c633300e1e-67128005d690.jpg&w=640&q=75"
       />
       <div className="flex flex-col gap-2">

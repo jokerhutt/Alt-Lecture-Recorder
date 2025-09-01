@@ -22,7 +22,7 @@ function App() {
 
         <div className="w-full h-full flex">
           <div className="h-full w-1/4">
-            <div className="hidden h-full lg:block">
+            <div className="hidden h-full lg:flex">
               <MainNavigation />
             </div>
           </div>

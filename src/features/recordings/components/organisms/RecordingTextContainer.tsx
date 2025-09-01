@@ -15,8 +15,8 @@ export function RecordingTextContainer({
 }: RecordingTextContainerProps) {
   const navigate = useNavigate()
   return (
-        <div onClick={() => navigate("/recordings/1")} className="flex flex-col gap-2">
-          <h2 className="text-3xl font-bold text-leidenBlue">{title}</h2>
+        <div  className="flex flex-col  gap-2">
+          <h2 onClick={() => navigate("/recordings/1")} className="text-3xl font-bold text-leidenBlue hover:cursor-pointer hover:underline">{title}</h2>
           <p>Owner: {owner}</p>
           <div className="flex gap-2 text-leidenBlue font-bold">
             <HeroIcon solid={true} iconName="FolderIcon" />

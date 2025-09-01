@@ -18,7 +18,7 @@ export function PageTemplate({children, header, selections, selectionscount}: Pa
 
 
   return (
-    <div className="flex h-full flex-col px-6">
+    <div className="flex h-full flex-col px-6 overflow-y-scroll">
       {header && <PageHeader title={header}/>}
       <hr className="w-full text-black my-4" />
       <RecordingSelection />
